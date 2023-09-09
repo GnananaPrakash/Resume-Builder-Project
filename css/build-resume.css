@@ -1,0 +1,25 @@
+main {
+    margin: 1rem 8rem;
+}
+
+.build-resume-title {
+    padding-top: 100px;
+    margin: 2rem 1rem 2rem 0;
+}
+
+.create-resume-btn {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+@media only screen and (max-width : 768px) {
+    main {
+        margin: 1rem 5rem;
+    }
+}
+
+@media only screen and (max-width : 552px) {
+    main {
+        margin: 1rem 2rem;
+    }
+}
