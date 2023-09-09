@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your-resume</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="./styles/main.css"> -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            --mainTextColor-light: #000;
+            --secondaryTextColor-light: rgb(51 51 51);
+            --mainLinkColor-light: #0da2b8;
+            --mainBorderColor-light: rgb(218, 218, 218);
+            --mainBgColor-light: rgb(249, 250, 251);
+
+            --mainTextColor-dark: #fff;
+            --secondaryTextColor-dark: #adb0b1;
+            --mainLinkColor-dark: rgb(30, 190, 214);
+            --mainBorderColor-dark: #2b3031;
+            --mainBgColor-dark: #131415;
+
+            --mainTextColor: var(--mainTextColor-dark);
+            --secondaryTextColor: var(--secondaryTextColor-dark);
+            --mainLinkColor: var(--mainLinkColor-dark);
+            --mainBorderColor: var(--mainBorderColor-dark);
+            --mainBgColor: var(--mainBgColor-dark);
+
+        }
+
+
+        * {
+            font-family: 'Readex Pro';
+            line-height: 1.5em;
+            box-sizing: border-box;
+            color: var(--mainTextColor);
+
+        }
+
+        body {
+            background-color: var(--mainBgColor);
+        }
+
+        p,
+        span,
+        li {
+            color: var(--secondaryTextColor);
+            font-size: 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--mainLinkColor);
+            font-weight: 500;
+        }
+
+        li {
+            line-height: 1.9em;
+        }
+
+        #container--main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        .section--page {
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        #wrapper--hero {
+            display: flex;
+            align-items: center;
+            gap: 4em;
+        }
+
+        #bio,
+        a {
+            font-weight: 300;
+        }
+
+        #user-name {
+            font-size: 48px;
+            line-height: 1em;
+        }
+
+        #profile-pic {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        #email {
+            color: var(--mainTextColor);
+        }
+
+        #socials--list {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 1em;
+            flex-wrap: wrap;
+        }
+
+        #socials--list a {
+            font-weight: 300;
+            color: var(--secondaryTextColor);
+            font-size: 0.9em;
+            transition: 0.3s;
+        }
+
+        #socials--list a:hover {
+            font-weight: 100;
+            color: var(--mainLinkColor);
+            font-size: 0.9em;
+        }
+
+        #qualifications--list {
+            list-style: none;
+        }
+
+        #wrapper--techstack__items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            font-size: 0.9em;
+        }
+
+        .card--techstack {
+            border: 1px solid var(--mainBorderColor);
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            align-items: center;
+        }
+
+        .card--project {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-top: 1px solid var(--mainBorderColor);
+        }
+
+        .card--project a {
+            color: var(--mainTextColor);
+
+            transition: 0.3s;
+        }
+
+        .card--project a:hover {
+            color: rgb(30, 190, 214);
+
+        }
+
+        .card--work-history {
+            border-left: 1px solid var(--mainBorderColor);
+            margin-top: 3em;
+            margin-bottom: 3em;
+            padding-left: 2em;
+        }
+
+        .line-break {
+            background-color: var(--mainBorderColor);
+            height: 1px;
+        }
+
+
+        @media(max-width:600px) {
+
+            .section--page {
+                padding-top: 1em;
+                padding-bottom: 1em;
+            }
+
+            #wrapper--hero {
+                display: flex;
+                align-items: center;
+                gap: 1em;
+            }
+
+            #profile-pic {
+                width: 200px;
+                height: 200px;
+            }
+
+            #wrapper--hero {
+                flex-direction: column;
+            }
+
+            .card--work-history {
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+
+        @media print {
+            @page {
+                margin: 2rem;
+            }
+
+            body {
+                margin: 3rem;
+            }
+
+            #download-now {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div id="container--main">
+
+        <section id="wrapper--hero" class="section--page">
+            <img id="profile-pic" src="../assets/images/round-profile.png">
+
+            <div>
+                <h1 id="user-name">Ruban Gino Singh</h1>
+                <p id="bio">Hi, I am Ruban Gino Singh. I'm Inspired to make Innovative and Unique based on my Technical
+                    Knowledge. I had done my
+                    high school at @Rose Mary School and left for an Undergraduate programme at @Karunya University. to
+                    extend my skills for
+                    the future world. Apart from my studies, I prefer to be a tech enthusiast, and I've spent time
+                    coding, designing, and
+                    developing new projects as a freelance full-stack web developer.</a>.</p>
+                <p>👉 <span id="email">info@rubangino.in</span></p>
+            </div>
+        </section>
+
+        <section class="section--page">
+
+            <div id="socials--list">
+                <a href="#" target="_blank" id="youtube">Youtube</a>
+                <a href="#" target="_blank" id="twitter">Twitter</a>
+                <a href="#" target="_blank" id="linkedIn">Linkedin</a>
+                <a href="#" target="_blank" id="github">Github</a>
+                <a id="download-now" onclick="downloadNow()" target="_blank">Download Resume</a>
+            </div>
+        </section>
+
+        <section class="section--page">
+            <h2>Skills & Qualifications</h2>
+            <ul id="qualifications--list">
+                <li>✔️ <span id="skill-1">7 Years experience with front & backend development</span></li>
+                <li>✔️ <span id="skill-2">Extensive knowledge in API & Database Design.</span></li>
+                <li>✔️ <span id="skill-3">Experienced content creator on YouTube & community leader</span></li>
+                <li>✔️ <span id="skill-4">7 Years experience with running Adwords campaigns & SEO</span></li>
+            </ul>
+        </section>
+
+        <section class="section--page">
+            <h2>Tech stack</h2>
+
+            <div id="wrapper--techstack__items">
+                <div class="card--techstack"><span id="tech1">Python, JavaScript, NodeJS</span></div>
+                <div class="card--techstack"><span id="tech2">Django, Express, Flask, FastAPI</span></div>
+                <div class="card--techstack"><span id="tech3">React, Next JS</span></div>
+                <div class="card--techstack"><span id="tech4">Postgres, MongoDB, MySQL</span></div>
+            </div>
+        </section>
+
+        <section id="work-history-wrapper" class="section--page">
+            <h2>Work History</h2>
+
+            <div class="line-break"></div>
+            <div class="card--work-history">
+                <strong>🚧 <span><strong id="Work-title">FREELANCE DEVELOPER | IMPLER.IN</strong></span></strong>
+                <p id="work-desc">Worked on making impler's Web Based SDK more accessible through video tutorials,
+                    articles, demo
+                    projects and event based training. Also building out React UI components & leading a team to
+                    re-design IMPLER's documentation and api reference.</p>
+            </div>
+
+            <div class="line-break"></div>
+
+        </section>
+
+        <section class="section--page">
+            <h2>Projects & Accomplishments</h2>
+
+            <div class="card--project">
+                <a href="#"><span>🏆 </span><span id="project1">Built a Laboratory management system for forensics
+                        lab</span></a>
+            </div>
+
+            <div class="card--project">
+                <a href="#"><span>🏆 </span><span id="project2">Documentation website - Lead team to re-build docs for
+                        agora.io</span></a>
+            </div>
+
+            <div class="card--project">
+                <a href="#"><span>🏆 </span><span id="project3">Ecommerce platform using paypal and stripe API for
+                        payment
+                        integration</span></a>
+            </div>
+
+            <div class="card--project">
+                <a href="#"><span>🏆 </span><span id="project4">Social Network - open source project</span></a>
+            </div>
+
+        </section>
+
+
+    </div>
+
+    <!-- Output page file -->
+    <script src="../js/output-page.js"></script>
+
+    <script>
+
+        function downloadNow() {
+
+            alert("Once you've clicked the print button, The Entered resume Details will be deleted!!!");
+
+            window.print();
+
+            localStorage.removeItem("resume-data");
+
+            location.reload();
+
+            location.href = "home.html";
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start building your resume! | CV Builder | Ruban Gino Singh</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts - inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/build-resume.css">
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold fs-4" href="home.html">
+                    <span>
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </span>
+                    <span class="navbar-brand-text">CV </span> Builder
+                </a>
+
+                <div class="right-nav">
+                    <img src="../assets/images/round-profile.png" width="35" height="35" alt=""
+                        style="border-radius: 50%; cursor: pointer;">
+                
+                    <button class="btn btn-primary" id="logout-btn">Logout</button>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="build-resume-title">Fill your details and get your Resume :)</h1>
+
+        <form id="get-details">
+            <!-- Upload profile pic -->
+            <div class="form-group mb-4">
+                <h4>Profile Details</h4>
+                <label class="form-label fw-5" for="customFile">Upload your profile pic</label>
+                <input type="file" class="form-control" id="profileFile" required />
+            </div>
+
+            <!-- Enter user name -->
+            <div class="form-group mb-4">
+                <label class="form-label fw-5" for="inputName">Name: </label>
+                <input type="text" class="form-control" id="user-name"
+                    placeholder="Enter your full name Eg: Ruban Gino Singh" required>
+                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+
+            <!-- Summary about the user -->
+            <div class="form-group mb-4">
+                <label for="formControlTextarea1" class="form-label fw-5">About yourself:</label>
+                <textarea class="form-control" id="user-about" rows="4"
+                    placeholder="Describe about yourself in few lines..." required></textarea>
+            </div>
+
+            <!-- User Email id -->
+            <div class="form-group mb-4">
+                <label for="emailId" class="form-label fw-5">Email id:</label>
+                <input type="email" class="form-control" id="user-email" placeholder="Enter your email address"
+                    required>
+            </div>
+
+            <!-- Social Links -->
+            <div class="form-group mb-4">
+                <label for="social-link" class="form-label fw-5">Social Links:</label>
+                <input type="text" class="form-control" id="user-youtube"
+                    placeholder="Enter your Youtube channel URL (Eg: https://www.youtube.com/c/your-channel-id)"
+                    required>
+                <input type="text" class="form-control my-3" id="user-twitter"
+                    placeholder="Enter your Twitter profile URL (Eg: https://twitter.com/rubangino)" required>
+                <input type="text" class="form-control my-3" id="user-linkedin"
+                    placeholder="Enter your Linkedin profile link (Eg: https://www.linkedin.com/in/ruban-gino-singh/)"
+                    required>
+                <input type="text" class="form-control my-3" id="user-github"
+                    placeholder="Enter your Github profile link (Eg: https://github.com/ruban2205)" required>
+            </div>
+
+            <!-- Skills and Qualifications -->
+            <div class="form-group mt-5 mb-4">
+                <h4>Skills and Qualifications</h4>
+                <p>Provide your Top 4 skills</p>
+                <label for="skill1" class="form-label fw-5 my-2">Skill-1:</label>
+                <input type="text" class="form-control mb-3" id="user-skill-1"
+                    placeholder="Eg: 7 years experience with front & backend development" required>
+
+                <label for="skill2" class="form-label fw-5 my-2">Skill-2:</label>
+                <input type="text" class="form-control mb-3" id="user-skill-2"
+                    placeholder="Eg: Extensive knowledge in API & Database Design" required>
+
+                <label for="skill3" class="form-label fw-5 my-2">Skill-3:</label>
+                <input type="text" class="form-control mb-3" id="user-skill-3"
+                    placeholder="Eg: Experienced content creator on YouTube & Community Leader" required>
+
+                <label for="skill4" class="form-label fw-5 my-2">Skill-4:</label>
+                <input type="text" class="form-control mb-3" id="user-skill-4"
+                    placeholder="Eg: 7 years experience with running Adwords campaigns & SEO" required>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="form-group mt-5 mb-4">
+                <h4>Tech Stack</h4>
+                <p>Provide your Tech stacks here</p>
+
+                <label for="techstack1" class="form-label fw-5 my-2">Tech stack1:</label>
+                <input type="text" class="form-control mb-3" id="user-stack-1"
+                    placeholder="Eg: Python, JavaScript, NodeJS" required>
+
+                <label for="techstack2" class="form-label fw-5 my-2">Tech stack2:</label>
+                <input type="text" class="form-control mb-3" id="user-stack-2"
+                    placeholder="Eg: Django, Express, Flask, FastAPI" required>
+
+                <label for="teckstack3" class="form-label fw-5 my-2">Tech stack3:</label>
+                <input type="text" class="form-control mb-3" id="user-stack-3" placeholder="Eg: React, Next JS"
+                    required>
+
+                <label for="techstack4" class="form-label fw-5 my-2">Tech stack4:</label>
+                <input type="text" class="form-control mb-3" id="user-stack-4"
+                    placeholder="Eg: Postgres, MongoDB, MySQL" required>
+            </div>
+
+            <!-- Work History -->
+            <div class="form-group mt-5 mb-4">
+                <h4>Work Histroy</h4>
+                <p>Provide your work history here</p>
+
+                <label for="workTitle" class="form-label fw-5 my-2">Title of your work:</label>
+                <input type="text" class="form-control mb-3" id="user-work-title" placeholder="Your Work Title"
+                    required>
+
+                <label for="workExperience" class="form-label fw-5 my-2">Work Experience:</label>
+                <textarea class="form-control" id="user-work" rows="5"
+                    placeholder="Describe about your previous experience..." required></textarea>
+            </div>
+
+            <!-- Projects and Accomplishments -->
+            <div class="form-group mt-5 mb-4">
+                <h4>Projects & Accomplishments</h4>
+
+                <label for="project1" class="form-label fw-5 my-2">Project1: </label>
+                <input type="text" class="form-control mb-3" id="user-project1"
+                    placeholder="Eg: Built a laboratory management system for forensics lab" required>
+
+                <label for="project2" class="form-label fw-5 my-2">Project2:</label>
+                <input type="text" class="form-control mb-3" id="user-project2"
+                    placeholder="Eg: Documentation website - Lead team to re-build docs for rubangino.in" required>
+
+                <label for="project3" class="form-label fw-5 my-2">Project3:</label>
+                <input type="text" class="form-control mb-3" id="user-project3"
+                    placeholder="Eg: E-commerce platform using paypal and stripe API for payment Integration" required>
+
+                <label for="project4" class="form-label fw-5 my-2">Project4:</label>
+                <input type="text" class="form-control mb-3" id="user-project4"
+                    placeholder="Eg: Social network - open source project" required>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary create-resume-btn">Create Resume</button>
+        </form>
+    </main>
+
+
+    <footer>
+        <div class="container-fluid copyright-text bg-secondary pt-4 pb-3">
+            <p class="text-center fw-3">&copy; 2022 CV Builder. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var userDetails = JSON.parse(localStorage.getItem("resume-user"));
+        document.getElementById("profile-pic").src = userDetails.photoURL;
+        // console.log(userDetails);
+    </script>
+
+    <!-- Sign out Function -->
+    <script type="module">
+
+        import {
+                signOut
+            } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js'
+
+            import {
+                initialize
+            } from '../js/firebase.js'
+
+            import {
+                config
+            } from '../js/config.js'
+
+            const {
+                firebaseAuth
+            } = initialize(config.firebaseAuth)
+
+            const logout = document.querySelector("#logout-btn");
+
+            logout.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                firebaseAuth.signOut().then(() => {
+                    // console.log("User Signed Out");
+                    location.href = "../index.html";
+                    alert("Thanks for using CV Builder Application!!!");
+                });
+            });
+
+    </script>
+
+    <!-- Build Resume file -->
+    <script src="../js/build-resume.js"></script>
+
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- bootstrap popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
